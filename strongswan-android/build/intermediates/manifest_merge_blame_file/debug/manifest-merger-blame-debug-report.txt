@@ -1,0 +1,392 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3    Copyright (C) 2012-2020 Tobias Brunner
+4    Copyright (C) 2012 Giuliano Grassi
+5    Copyright (C) 2012 Ralf Sager
+6    HSR Hochschule fuer Technik Rapperswil
+7
+8    This program is free software; you can redistribute it and/or modify it
+9    under the terms of the GNU General Public License as published by the
+10    Free Software Foundation; either version 2 of the License, or (at your
+11    option) any later version.  See <http://www.fsf.org/copyleft/gpl.txt>.
+12
+13    This program is distributed in the hope that it will be useful, but
+14    WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+15    or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+16    for more details.
+17-->
+18<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+19    xmlns:tools="http://schemas.android.com/tools"
+20    package="org.strongswan.android" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="15"
+23-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml
+24        android:targetSdkVersion="30" />
+24-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml
+25
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:21:5-67
+26-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:21:22-64
+27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+27-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:22:5-79
+27-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:22:22-76
+28    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+28-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:23:5-77
+28-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:23:22-74
+29    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+29-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:24:5-80
+29-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:24:22-77
+30    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+30-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:25:5-95
+30-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:25:22-92
+31    <!-- necessary to allow users to select ex-/included apps and EAP-TNC -->
+32    <uses-permission
+32-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:27:5-29:53
+33        android:name="android.permission.QUERY_ALL_PACKAGES"
+33-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:28:9-61
+34        tools:ignore="QueryAllPackagesPermission" />
+34-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:29:9-50
+35
+36    <application
+36-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:31:5-187:19
+37        android:name="org.strongswan.android.logic.StrongSwanApplication"
+37-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:32:9-52
+38        android:allowBackup="false"
+38-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:33:9-36
+39        android:icon="@mipmap/ic_launcher"
+39-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:34:9-43
+40        android:label="@string/app_name"
+40-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:35:9-41
+41        android:networkSecurityConfig="@xml/network_security_config"
+41-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:36:9-69
+42        android:theme="@style/ApplicationTheme" >
+42-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:37:9-48
+43        <activity
+43-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:38:9-49:20
+44            android:name="org.strongswan.android.ui.MainActivity"
+44-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:39:13-44
+45            android:label="@string/main_activity_name"
+45-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:40:13-55
+46            android:launchMode="singleTop" >
+46-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:41:13-43
+47            <intent-filter>
+47-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:42:13-45:29
+48                <action android:name="android.intent.action.MAIN" />
+48-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:43:17-69
+48-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:43:25-66
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:44:17-77
+50-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:44:27-74
+51            </intent-filter>
+52            <intent-filter>
+52-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:46:13-48:29
+53                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+53-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:47:17-99
+53-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:47:25-96
+54            </intent-filter>
+55        </activity>
+56        <activity
+56-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:50:9-64:20
+57            android:name="org.strongswan.android.ui.VpnProfileControlActivity"
+57-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:51:13-57
+58            android:excludeFromRecents="true"
+58-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:52:13-46
+59            android:launchMode="singleTask"
+59-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:53:13-44
+60            android:taskAffinity=""
+60-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:54:13-36
+61            android:theme="@style/TransparentActivity" >
+61-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:55:13-55
+62            <intent-filter>
+62-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:56:13-59:29
+63                <action android:name="org.strongswan.android.action.START_PROFILE" />
+63-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:57:17-86
+63-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:57:25-83
+64
+65                <category android:name="android.intent.category.DEFAULT" />
+65-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+65-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+66            </intent-filter>
+67            <intent-filter>
+67-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:60:13-63:29
+68                <action android:name="org.strongswan.android.action.DISCONNECT" />
+68-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:61:17-83
+68-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:61:25-80
+69
+70                <category android:name="android.intent.category.DEFAULT" />
+70-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+70-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+71            </intent-filter>
+72        </activity>
+73        <activity android:name="org.strongswan.android.ui.VpnProfileDetailActivity" />
+73-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:65:9-74
+73-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:65:19-62
+74        <activity
+74-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:66:9-68:68
+75            android:name="org.strongswan.android.ui.TrustedCertificatesActivity"
+75-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:67:13-59
+76            android:label="@string/trusted_certs_title" />
+76-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:68:13-56
+77        <activity
+77-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:69:9-71:68
+78            android:name="org.strongswan.android.ui.SelectedApplicationsActivity"
+78-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:70:13-60
+79            android:label="@string/profile_select_apps" />
+79-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:71:13-56
+80        <activity
+80-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:72:9-74:58
+81            android:name="org.strongswan.android.ui.LogActivity"
+81-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:73:13-43
+82            android:label="@string/log_title" />
+82-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:74:13-46
+83        <activity
+83-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:75:9-77:59
+84            android:name="org.strongswan.android.ui.SettingsActivity"
+84-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:76:13-48
+85            android:label="@string/pref_title" />
+85-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:77:13-47
+86        <activity
+86-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:78:9-80:79
+87            android:name="org.strongswan.android.ui.RemediationInstructionsActivity"
+87-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:79:13-63
+88            android:label="@string/remediation_instructions_title" />
+88-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:80:13-67
+89        <activity
+89-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:81:9-89:20
+90            android:name="org.strongswan.android.ui.VpnProfileSelectActivity"
+90-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:82:13-56
+91            android:icon="@mipmap/ic_shortcut"
+91-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:83:13-47
+92            android:label="@string/strongswan_shortcut" >
+92-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:84:13-56
+93            <intent-filter>
+93-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:85:13-88:29
+94                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+94-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:86:17-80
+94-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:86:25-77
+95
+96                <category android:name="android.intent.category.DEFAULT" />
+96-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+96-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+97            </intent-filter>
+98        </activity>
+99        <activity
+99-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:90:9-142:20
+100            android:name="org.strongswan.android.ui.VpnProfileImportActivity"
+100-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:91:13-56
+101            android:excludeFromRecents="true"
+101-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:92:13-46
+102            android:label="@string/profile_import"
+102-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:93:13-51
+103            android:taskAffinity="" >
+103-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:94:13-36
+104            <intent-filter>
+104-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:95:13-106:29
+105                <action android:name="android.intent.action.VIEW" />
+105-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:17-69
+105-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:25-66
+106
+107                <category android:name="android.intent.category.DEFAULT" />
+107-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+107-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+108                <category android:name="android.intent.category.BROWSABLE" />
+108-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:17-78
+108-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:27-75
+109
+110                <data android:scheme="http" />
+110-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+110-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+111                <data android:scheme="https" />
+111-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+111-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+112                <data android:scheme="file" />
+112-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+112-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+113                <data android:scheme="content" />
+113-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+113-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+114                <data android:mimeType="application/vnd.strongswan.profile" />
+114-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+114-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+115            </intent-filter>
+116            <!-- this matches by file extension if no MIME type is provided -->
+117            <intent-filter>
+117-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:108:13-123:29
+118                <action android:name="android.intent.action.VIEW" />
+118-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:17-69
+118-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:25-66
+119
+120                <category android:name="android.intent.category.DEFAULT" />
+120-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+120-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+121                <category android:name="android.intent.category.BROWSABLE" />
+121-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:17-78
+121-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:27-75
+122
+123                <data android:scheme="http" />
+123-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+123-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+124                <data android:scheme="https" />
+124-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+124-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+125                <data android:scheme="file" />
+125-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+125-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+126                <data android:scheme="content" />
+126-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+126-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+127                <data android:host="*" />
+127-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+127-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:118:23-39
+128                <data android:pathPattern=".*\\..*\\..*\\..*\\.sswan" />
+128-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+128-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+129                <data android:pathPattern=".*\\..*\\..*\\.sswan" />
+129-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+129-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+130                <data android:pathPattern=".*\\..*\\.sswan" />
+130-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+130-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+131                <data android:pathPattern=".*\\.sswan" />
+131-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+131-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+132            </intent-filter>
+133            <!-- this matches by file extension if any MIME type (but not ours) is provided -->
+134            <intent-filter>
+134-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:125:13-141:29
+135                <action android:name="android.intent.action.VIEW" />
+135-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:17-69
+135-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:25-66
+136
+137                <category android:name="android.intent.category.DEFAULT" />
+137-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+137-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+138                <category android:name="android.intent.category.BROWSABLE" />
+138-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:17-78
+138-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:99:27-75
+139
+140                <data android:scheme="http" />
+140-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+140-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+141                <data android:scheme="https" />
+141-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+141-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+142                <data android:scheme="file" />
+142-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+142-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+143                <data android:scheme="content" />
+143-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+143-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:23-44
+144                <data android:host="*" />
+144-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+144-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:118:23-39
+145                <data android:mimeType="*/*" />
+145-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+145-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+146                <data android:pathPattern=".*\\..*\\..*\\..*\\.sswan" />
+146-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+146-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+147                <data android:pathPattern=".*\\..*\\..*\\.sswan" />
+147-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+147-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+148                <data android:pathPattern=".*\\..*\\.sswan" />
+148-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+148-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+149                <data android:pathPattern=".*\\.sswan" />
+149-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+149-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:119:23-70
+150            </intent-filter>
+151        </activity>
+152        <activity
+152-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:143:9-156:20
+153            android:name="org.strongswan.android.ui.TrustedCertificateImportActivity"
+153-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:144:13-64
+154            android:label="@string/import_certificate"
+154-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:145:13-55
+155            android:theme="@style/TransparentActivity" >
+155-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:146:13-55
+156            <intent-filter tools:ignore="AppLinkUrlError" >
+156-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:147:13-155:29
+156-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:147:28-58
+157                <action android:name="android.intent.action.VIEW" />
+157-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:17-69
+157-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:96:25-66
+158
+159                <category android:name="android.intent.category.DEFAULT" />
+159-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:17-76
+159-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:58:27-73
+160
+161                <data android:mimeType="application/x-x509-ca-cert" />
+161-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+161-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+162                <data android:mimeType="application/x-x509-server-cert" />
+162-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+162-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+163                <data android:mimeType="application/x-pem-file" />
+163-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+163-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+164                <data android:mimeType="application/pkix-cert" />
+164-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:101:17-47
+164-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:105:23-76
+165            </intent-filter>
+166        </activity>
+167
+168        <service
+168-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:158:9-160:40
+169            android:name="org.strongswan.android.logic.VpnStateService"
+169-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:159:13-50
+170            android:exported="false" />
+170-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:160:13-37
+171        <service
+171-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:161:9-168:19
+172            android:name="org.strongswan.android.logic.CharonVpnService"
+172-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:162:13-51
+173            android:exported="false"
+173-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:163:13-37
+174            android:permission="android.permission.BIND_VPN_SERVICE" >
+174-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:164:13-69
+175            <intent-filter>
+175-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:165:13-167:29
+176                <action android:name="android.net.VpnService" />
+176-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:166:17-65
+176-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:166:25-62
+177            </intent-filter>
+178        </service>
+179        <service
+179-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:169:9-177:19
+180            android:name="org.strongswan.android.ui.VpnTileService"
+180-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:170:13-46
+181            android:icon="@drawable/ic_notification"
+181-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:171:13-53
+182            android:label="@string/tile_default"
+182-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:172:13-49
+183            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE" >
+183-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:173:13-77
+184            <intent-filter>
+184-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:174:13-176:29
+185                <action android:name="android.service.quicksettings.action.QS_TILE" />
+185-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:175:17-87
+185-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:175:25-84
+186            </intent-filter>
+187        </service>
+188
+189        <provider
+189-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:179:9-186:20
+190            android:name="org.strongswan.android.data.LogContentProvider"
+190-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:180:13-52
+191            android:authorities="org.strongswan.android.content.log"
+191-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:181:13-69
+192            android:exported="true" >
+192-->/Users/zhoujie/AndroidStudioProjects/MyApplication7/strongswan-android/src/main/AndroidManifest.xml:182:13-36
+193
+194            <!--
+195                 android:grantUriPermissions="true" combined with a custom permission does
+196                 not work (probably too many indirections with ACTION_SEND) so we secure
+197                 this provider with a custom ticketing system
+198            -->
+199        </provider>
+200    </application>
+201
+202</manifest>
